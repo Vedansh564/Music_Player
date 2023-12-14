@@ -4,7 +4,7 @@ import time
 import tkinter.messagebox
 from tkinter import *
 from tkinter import filedialog
-
+#from tkinter import PhotoImage
 from tkinter import ttk
 from ttkthemes import themed_tk as tk
 
@@ -60,7 +60,7 @@ subMenu.add_command(label="Exit", command=root.destroy)
 
 
 def about_us():
-    tkinter.messagebox.showinfo('About Melody', 'This is a music player build using Python Tkinter by @attreyabhatt')
+    tkinter.messagebox.showinfo('About Melody', 'This is a music player build using Python Tkinter by @Vedansh')
 
 
 subMenu = Menu(menubar, tearoff=0)
@@ -68,6 +68,10 @@ menubar.add_cascade(label="Help", menu=subMenu)
 subMenu.add_command(label="About Us", command=about_us)
 
 mixer.init()  # initializing the mixer
+
+bg = PhotoImage(file='images/download.png')
+classs = Label(root, image=bg)
+classs.place(x=0,y=0,relwidth=1,relheight=1)
 
 root.title("Melody")
 root.iconbitmap(r'images/melody.ico')
